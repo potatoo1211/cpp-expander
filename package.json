@@ -1,0 +1,36 @@
+{
+  "name": "cpp-expander",
+  "displayName": "C++ Expander & Runner",
+  "description": "Run C++ with include expansion",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cpp-expander.justRun",
+        "title": "C++: Just Run (No Copy)"
+      },
+      {
+        "command": "cpp-expander.runAndCopy",
+        "title": "C++: Run & Copy"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.0"
+  }
+}
